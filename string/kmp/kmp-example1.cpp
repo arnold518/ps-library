@@ -9,6 +9,7 @@ typedef pair<ll, ll> pll;
 
 namespace KMP
 {
+    // 0-based, O(|S|)
     // kmp(S = "ababacaca") = [ -, 0, 1, 2, 3, 0, 1, 0, 1 ]
     vector<int> kmp(string S)
     {
