@@ -9,7 +9,7 @@ namespace AhoCorasick {
 // then call calc() to calculate fail, suf, chd, jump
 // aho_corasick(S) : Find occurences of TV (strings inserted in trie) in S (ending position)
 // aho_corasick(S = "mississippi", TV = ["ss", "sis", "ippi", "pp"]) = [3, 5, 6, 9, 10]
-const static int CH = 26;
+const int CH = 26;
 struct Node {
   int par, fail, suf;
   vector<int> chd, jmp;
