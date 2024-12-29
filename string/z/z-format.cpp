@@ -1,4 +1,5 @@
 namespace Z {
+
 // Z[i] = LCP(S[i...], S)
 // get_z(S = "ababacaca") = [ -, 0, 3, 0, 1, 0, 1, 0, 1 ]
 vector<int> get_z(string S) {
@@ -11,4 +12,5 @@ vector<int> get_z(string S) {
   }
   return A;
 }
+
 }
