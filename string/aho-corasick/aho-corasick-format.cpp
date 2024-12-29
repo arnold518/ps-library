@@ -6,7 +6,7 @@ namespace AhoCorasick {
 // v.chd[c] = c-th children of node v in trie
 // v.jmp[c] = c-th next match of node v in automaton
 // call init() first, and insert strings using insert(T_i)
-// then call calc() to calculate fail, suf, chd, jump
+// then call calc() to calculate fail, suf, chd, jump, and then call aho_corasick(S)
 // aho_corasick(S) : Find occurences of TV (strings inserted in trie) in S (ending position)
 // aho_corasick(S = "mississippi", TV = ["ss", "sis", "ippi", "pp"]) = [3, 5, 6, 9, 10]
 const int CH = 26;
@@ -25,7 +25,6 @@ int newNode() {
   NS.push_back(Node());
   return NS.size() - 1;
 }
-
 void init() {
   NS.clear();
   root = newNode();
@@ -33,7 +32,6 @@ void init() {
   NS[root].fail = root;
   NS[root].suf = root;
 }
-
 void insert(const string &S) {
   int now = root;
   for (auto c : S) {
@@ -45,7 +43,6 @@ void insert(const string &S) {
   }
   NS[now].suf = now;
 }
-
 void calc() {
   queue<int> Q;
   Q.push(root);
@@ -75,7 +72,6 @@ void calc() {
     }
   }
 }
-
 vector<int> aho_corasick(string S) {
   vector<int> ans;
   int now = root;
