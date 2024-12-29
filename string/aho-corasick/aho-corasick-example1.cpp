@@ -1,3 +1,5 @@
+// https://www.acmicpc.net/problem/9250
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -113,7 +115,7 @@ namespace AhoCorasick
 int main()
 {
     ios_base::sync_with_stdio(false); cin.tie(NULL);
-    
+
     int N, Q;
     cin >> N;
 
