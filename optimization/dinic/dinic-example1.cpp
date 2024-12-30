@@ -9,7 +9,7 @@ typedef pair<ll, ll> pll;
 
 struct Dinic
 {
-    // 0-based, directed graph, add_edge : O(1), flow : O(min(V^2 E, EF))
+    // 0-based, directed graph, init : O(V), add_edge : O(1), flow : O(min(V^2 E, EF))
     // call init() first, add_edge(u, v, c), then flow(source, sink)
     // adj = residual graph of current flow (v = node, c = capacity, r = index of reverse edge)
     // to get actual flow, you must save original capcity of all edges
