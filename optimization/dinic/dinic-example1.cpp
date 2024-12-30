@@ -35,7 +35,7 @@ struct Dinic
     }
     bool bfs()
     {
-        for(int i=0; i<N; i++) lvl[i]=0;
+        fill(lvl, lvl+N, 0);
         queue<int> Q;
         Q.push(src); lvl[src]=1;
         while(!Q.empty())
@@ -75,7 +75,7 @@ struct Dinic
         {
             while(bfs())
             {
-                for(int i=0; i<N; i++) pos[i]=0;
+                fill(pos, pos+N, 0);
                 while(1)
                 {
                     T t=dfs(src, INF);
