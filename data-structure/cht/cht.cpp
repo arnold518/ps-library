@@ -25,6 +25,9 @@ namespace CHT
     {
         deque<Line> V;
 
+        // call init() first
+        void init() { V.clear(); }
+
         // push : ammortized O(1)
         // Insert line p = ax+b
         // b must be increasing (or decreasing) ('slope')

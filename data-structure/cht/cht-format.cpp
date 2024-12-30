@@ -22,6 +22,9 @@ Frac cross(const Line &p, const Line &q) { return Frac(p.b - q.b, q.a - p.a); } 
 // min/max : max, slope : -, dir : -
 struct CHT {
   deque<Line> V;
+  
+  // call init() first
+  void init() { V.clear(); }
 
   // push : ammortized O(1)
   // Insert line p = ax+b
