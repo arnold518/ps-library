@@ -1,6 +1,6 @@
 struct MCMF {
   // 0-based, directed graph, init : O(V), add_edge : O(1), flow : O(EF)
-  // call init() first, add_edge(u, v, c = capcity, w = cost), then flow(source, sink)
+  // call init(V) first, add_edge(u, v, c = capcity, w = cost), then flow(source, sink)
   // flow(source, sink) returns (min cost when max flow, max flow)
   // adj = residual graph of current flow (v = node, c = remaining capacity, w = cost, r = index of reverse edge)
   // to get actual flow, you must save original capcity of all edges
