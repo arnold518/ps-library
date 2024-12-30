@@ -23,6 +23,7 @@ Frac cross(const Line &p, const Line &q) { return Frac(p.b - q.b, q.a - p.a); } 
 struct CHT {
   deque<Line> V;
 
+  // push : ammortized O(1)
   // Insert line p = ax+b
   // b must be increasing (or decreasing) ('slope')
   // cross(V[i-1], V[i]) < (or >) cross(V[i], V[i+1]) ('dir')
@@ -35,7 +36,8 @@ struct CHT {
     V.push_back(p);
   }
 
-  // Get min (or max) value at x in O(logN)
+  // query : O(log N)
+  // Get min (or max) value at x
   ll query(ll x) {
     assert(!V.empty());
     int lo = 0, hi = V.size();
@@ -47,7 +49,8 @@ struct CHT {
     return V[lo].a * x + V[lo].b;
   }
 
-  // Get min (or max) value at x in ammortized O(1)
+  // query2 : ammortized O(1)
+  // Get min (or max) value at x
   // x must be increasing (or decreasing) ('dir')
   ll query2(ll x) {
     assert(!V.empty());
