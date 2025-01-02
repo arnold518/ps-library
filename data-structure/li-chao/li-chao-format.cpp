@@ -52,4 +52,5 @@ struct LiChao {
   }
   ll query(ll x) { return query(root, XL, XR, x); }
 };
+
 }
