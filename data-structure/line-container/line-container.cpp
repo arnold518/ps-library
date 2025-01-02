@@ -22,7 +22,7 @@ namespace LineContainer
             return x->p >= y->p;
         }
 
-        // push : O(log N), Insert line p = ax+b
+        // push : O(log N), insert line p = ax+b
         void push(ll a, ll b) {
             auto z = insert({a, b, 0}), y = z++, x = y;
             while (isect(y, z)) z = erase(z);
@@ -30,8 +30,8 @@ namespace LineContainer
             while ((y = x) != begin() && (--x)->p >= y->p) isect(x, erase(y));
         }
         
-        // query : O(log N), Get min (or max) value at x
-        // lower_bound : O(log N), Get min (or max) line at x
+        // query : O(log N), get min (or max) value at x
+        // lower_bound : O(log N), get min (or max) line at x
         ll query(ll x) {
             assert(!empty());
             auto l = *lower_bound(x);
