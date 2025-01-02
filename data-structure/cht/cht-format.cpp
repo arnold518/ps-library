@@ -26,7 +26,7 @@ struct CHT {
   // call init() first
   void init() { V.clear(); }
 
-  // push : ammortized O(1), insert line p = ax+b
+  // push : ammortized O(1), Insert line p = ax+b
   // b must be increasing (or decreasing) ('slope')
   // cross(V[i-1], V[i]) < (or >) cross(V[i], V[i+1]) ('dir')
   void push(Line p) {
@@ -38,7 +38,7 @@ struct CHT {
     V.push_back(p);
   }
 
-  // query : O(log N), get min (or max) value at x
+  // query : O(log N), Get min (or max) value at x
   ll query(ll x) {
     assert(!V.empty());
     int lo = 0, hi = V.size();
@@ -50,7 +50,7 @@ struct CHT {
     return V[lo].a * x + V[lo].b;
   }
 
-  // query2 : ammortized O(1), get min (or max) value at x
+  // query2 : ammortized O(1), Get min (or max) value at x
   // x must be increasing (or decreasing) ('dir')
   ll query2(ll x) {
     assert(!V.empty());
