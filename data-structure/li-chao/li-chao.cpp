@@ -26,7 +26,7 @@ namespace LiChao
         LiChao() { NS=vector<Node>(); root=newNode(); }
         int newNode() { NS.push_back(Node()); return NS.size()-1; }
 
-        // update : O(log X), Insert line p = ax+b
+        // update : O(log X), insert line p = ax+b
         void update(int node, ll tl, ll tr, Line p)
         {
             ll mid=tl+tr>>1;
@@ -45,7 +45,7 @@ namespace LiChao
         }
         void update(Line p) { update(root, XL, XR, p); }
 
-        // query : O(log X), Get min (or max) value at x
+        // query : O(log X), get min (or max) value at x
         ll query(int node, ll tl, ll tr, ll x)
         {
             if(node==-1) return INF; // min : INF , max : -INF
