@@ -33,7 +33,10 @@ void solve(ll lambda) {
     memo[i] = opt;
   }
 
-  for (int i = N; i > 0;) { V.push_back(i); i = memo[i]; }
+  for (int i = N; i > 0;) {
+    V.push_back(i);
+    i = memo[i];
+  }
   V.push_back(0);
   reverse(V.begin(), V.end());
 }
