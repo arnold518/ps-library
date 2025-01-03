@@ -19,14 +19,14 @@ struct SEG
     Data tree[MAXN*2+10];
     Data2 lazy[MAXN+10];
 
-    // apply : O(1), apply update value upd to subtree of node
+    // apply : apply update value upd to subtree of node
     void apply(int node, Data2 upd)
     {
         tree[node]=apply(tree[node], upd, rng[node].first, rng[node].second);
         if(node<N) lazy[node]=lazy[node]+upd;
     }
 
-    // push : O(1), propagate lazy value to child, and initialize lazy
+    // push : propagate lazy value to child, and initialize lazy
     void push(int node)
     {
         if(rng[node].first!=rng[node].second)
@@ -37,7 +37,7 @@ struct SEG
         lazy[node]=ID2;
     }
     
-    // push : O(1), recalculates value of node
+    // push : recalculates value of node
     void pull(int node)
     {
         tree[node]=tree[node<<1]+tree[node<<1|1];
