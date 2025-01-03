@@ -17,13 +17,13 @@ struct SEG {
   Data tree[MAXN * 4 + 10];
   Data2 lazy[MAXN * 4 + 10];
 
-  // apply : O(1), apply update value upd to subtree of node
+  // apply : apply update value upd to subtree of node
   void apply(int node, int tl, int tr, Data2 upd) {
     tree[node] = apply(tree[node], upd, tl, tr);
     lazy[node] = lazy[node] + upd;
   }
 
-  // push : O(1), propagate lazy value to child, and initialize lazy
+  // push : propagate lazy value to child, and initialize lazy
   void push(int node, int tl, int tr) {
     if (tl != tr) {
       int mid = tl + tr >> 1;
