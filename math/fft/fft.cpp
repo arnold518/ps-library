@@ -3,7 +3,7 @@ namespace FFT
     // double (double_range : 2^52) <=> long double (double_range : 2^63)
     // ll (long_range : 2^63) <=> dll (long_range : 2^128)
 
-	typedef complex<double> cpx;
+    typedef complex<double> cpx;
     const double PI = acos((double)-1);
 
     int M, B;
@@ -24,7 +24,7 @@ namespace FFT
     // dft : O(N log N), 0-based
     // get DFT (IDFT if inv is true) of polynomial F
     // length of A must be power of 2
-	void dft(vector<cpx> &F, bool inv)
+    void dft(vector<cpx> &F, bool inv)
     {
         int N=F.size(), C=__lg(N);
         for(int i=0; i<N; i++)
@@ -54,7 +54,7 @@ namespace FFT
     // MAXV * MAXV * N <= long_range
     // MAXV * MAXV * N <= double_range
     // stronger condition might need to hold, due to precision
-	vector<dll> multiply(vector<int> F, vector<int> G)
+    vector<dll> multiply(vector<int> F, vector<int> G)
     {
         int N=1;
         vector<dll> ret(F.size()+G.size()-1);
