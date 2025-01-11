@@ -19,8 +19,7 @@ mint mpow(mint a, ll b) {
   mint ret = 1;
   while (b) {
     if (b & 1) ret = ret * a;
-    a = a * a;
-    b >>= 1;
+    a = a * a; b >>= 1;
   }
   return ret;
 }
