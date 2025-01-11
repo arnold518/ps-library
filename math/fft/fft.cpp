@@ -1,3 +1,5 @@
+typedef __int128 dll;
+
 namespace FFT
 {
     // double (double_range : 2^52) <=> long double (double_range : 2^63)
