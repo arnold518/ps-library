@@ -63,6 +63,7 @@ namespace FFT
     // MAXV * MAXV * N <= long_range
     // MAXV * MAXV * N <= double_range
     // stronger condition might need to hold, due to precision
+    // multiply([1, 2, 3], [4, 5, 6, 7, 8]) = [4, 13, 28, 34, 40, 37, 24]
     vector<ll> multiply(vector<int> F, vector<int> G)
     {
         int N=1;
@@ -84,6 +85,7 @@ namespace FFT
     // MAXV * MAXV * N <= long_range
     // D * D * N = MAXV * N <= double_range
     // stronger condition might need to hold, due to precision
+    // multiply2([1, 2, 3], [4, 5, 6, 7, 8]) = [4, 13, 28, 34, 40, 37, 24]
     vector<ll> multiply2(vector<int> F, vector<int> G)
     {
         int N=1;
