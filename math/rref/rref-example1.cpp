@@ -40,24 +40,27 @@ mint inv(mint x) { return mpow(x, MOD-2); }
 
 typedef vector<vector<mint>> mat;
 
-// rref : O(NM min(N, M)), 0-based
-// gets rref of matrix A
-void rref(mat &A)
+namespace RREF
 {
-    int N=A.size(), M=A[0].size();
-    for(int y=0, x=0; x<M && y<N; x++)
+    // rref : O(NM min(N, M)), 0-based
+    // gets rref of matrix A
+    void rref(mat &A)
     {
-        int row=-1;
-        for(int i=y; i<N; i++) if(A[i][x]!=0) row=i;
-        if(row==-1) continue;
+        int N=A.size(), M=A[0].size();
+        for(int y=0, x=0; x<M && y<N; x++)
+        {
+            int row=-1;
+            for(int i=y; i<N; i++) if(A[i][x]!=0) row=i;
+            if(row==-1) continue;
 
-        for(int i=x; i<M; i++) swap(A[y][i], A[row][i]);
-        mint t=inv(A[y][x]);
-        for(int i=x; i<M; i++) A[y][i]*=t;
-        for(int i=0; i<N; i++) if(i!=y) for(int j=M-1; j>=x; j--) A[i][j]-=A[i][x]*A[y][j];
-        y++;
+            for(int i=x; i<M; i++) swap(A[y][i], A[row][i]);
+            mint t=inv(A[y][x]);
+            for(int i=x; i<M; i++) A[y][i]*=t;
+            for(int i=0; i<N; i++) if(i!=y) for(int j=M-1; j>=x; j--) A[i][j]-=A[i][x]*A[y][j];
+            y++;
+        }
     }
-}
+};
 
 int main()
 {
@@ -73,7 +76,7 @@ int main()
         A[i][j]=t;
     }
     for(int i=0; i<N; i++) A[i][i+N]=1;
-    rref(A);
+    RREF::rref(A);
     for(int i=0; i<N; i++) if(A[i][i]!=1) return !(cout << "-1\n");
     for(int i=0; i<N; i++) { for(int j=0; j<N; j++) cout << A[i][j+N] << " "; cout << "\n"; }
 }

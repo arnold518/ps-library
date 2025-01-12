@@ -1,5 +1,7 @@
 typedef vector<vector<mint>> mat;
 
+namespace RREF {
+
 // rref : O(NM min(N, M)), 0-based
 // gets rref of matrix A
 void rref(mat &A) {
@@ -16,3 +18,5 @@ void rref(mat &A) {
     y++;
   }
 }
+
+};
