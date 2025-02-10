@@ -1,6 +1,6 @@
 namespace Manacher {
 
-// 0-based, O(|S|)
+// 0-based, manacher : O(|S|)
 // S[i-P[i] ... i+P[i]] is palindrome
 // manacher(S = "abcbcba") = [ 0, 0, 1, 3, 1, 0, 0 ]
 vector<int> manacher(string S) {
