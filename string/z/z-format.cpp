@@ -1,6 +1,6 @@
 namespace Z {
 
-// 0-based, O(|S|)
+// 0-based, get_z : O(|S|)
 // Z[i] = LCP(S[i...], S)
 // get_z(S = "ababacaca") = [ -, 0, 3, 0, 1, 0, 1, 0, 1 ]
 vector<int> get_z(string S) {
