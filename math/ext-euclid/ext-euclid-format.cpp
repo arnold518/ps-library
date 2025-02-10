@@ -1,5 +1,7 @@
 typedef __int128 dll;
 
+namespace ExtEuclid {
+
 // mfloor : O(1), mceil : O(1), mmod : O(1)
 // mfloor : computes floor(x / m)
 // mceil  : computes ceil(x / m)
@@ -55,4 +57,6 @@ bool diophantine(ll a, ll b, ll c, ll &x, ll &y, ll &s, ll &t) {
   s = b; t = a;
   if (s < 0) s = -s, t = -t;
   return true;
+}
+
 }
