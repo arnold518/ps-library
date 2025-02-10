@@ -2,8 +2,8 @@
 
 ## data-structure
 
-- [cht](data-structure/cht.cpp)
-- [li-chao](data-structure/li-chao.cpp)
-- [line-container](data-structure/line-container.cpp)
-- [seg-recursive](data-structure/seg-recursive.cpp)
-- [seg-iterative](data-structure/seg-iterative.cpp)
+- [cht](data-structure/cht)
+- [li-chao](data-structure/li-chao)
+- [line-container](data-structure/line-container)
+- [seg-recursive](data-structure/seg-recursive)
+- [seg-iterative](data-structure/seg-iterative)
