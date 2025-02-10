@@ -1,6 +1,6 @@
 namespace SuffixArray
 {
-    // 0-based, O(|S|log|S|)
+    // 0-based, suffix_array : O(|S|log|S|)
     // SA[i] : starting position of i-th suffix when sorted
     // R[i] : lexicographic order of i-th suffix, R[SA[i]]=i
     // LCP[i] : LCP(S[SA[i-1] ...], S[SA[i] ...])
