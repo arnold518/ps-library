@@ -2,10 +2,10 @@ struct HopcroftKarp
 {
     // 1-based, unweighted bipartite graph, init : O(V), add_edge : O(1), matching : O(E sqrt V)
     // call init(N, M) first, add_edge(u, v), then matching()
-	// left vertices : 1 ~ N, right vertices : 1 ~ M
+    // left vertices : 1 ~ N, right vertices : 1 ~ M
     // matching() returns size of maximum matching
-	// A[u] = for left vertex u, 0 if unmatched, matched right vertex v otherwise
-	// B[v] = for right vertex v, 0 if unmatched, matched left vertex u otherwise
+    // A[u] = for left vertex u, 0 if unmatched, matched right vertex v otherwise
+    // B[v] = for right vertex v, 0 if unmatched, matched left vertex u otherwise
     const static int MAXV = 1e5;
     int N, M;
     vector<int> adj[MAXV+10];
@@ -18,7 +18,7 @@ struct HopcroftKarp
         for(int i=1; i<=N; i++) adj[i]=vector<int>(), A[i]=0;
         for(int i=1; i<=M; i++) B[i]=0;
     }
-	void add_edge(int u, int v) { adj[u].push_back(v); }
+    void add_edge(int u, int v) { adj[u].push_back(v); }
     void bfs()
     {
         queue<int> Q;
@@ -56,7 +56,7 @@ struct HopcroftKarp
         }
         return false;
     }
-	int matching()
+    int matching()
     {
         int flow=0;
         while(1)
@@ -69,5 +69,5 @@ struct HopcroftKarp
             flow+=t;
         }
         return flow;
-	}
+    }
 };
