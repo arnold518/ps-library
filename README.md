@@ -36,6 +36,7 @@
 
 ## graph
 
+- [spfa](graph/spfa/spfa.cpp)
 - [bcc](graph/bcc/bcc.cpp)
 
 ## optimization
