@@ -1,6 +1,6 @@
 namespace duval {
 
-// 0-based, O(|S|)
+// 0-based, duval : O(|S|)
 // get length of lexicographically smallest suffix for all prefix
 // lyndon(S = "ababca") = [1, 2, 1, 2, 5, 1]
 vector<int> lyndon(string &S) {
