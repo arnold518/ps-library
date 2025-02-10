@@ -113,7 +113,7 @@ bool chksqrt(poly p) {
   return true;
 }
 
-// sqrt : O(N log N)
+// sqrt : O(N log N + log^2 MOD)
 // returns q(x) such that q(x)^2 = p(x) (mod x^N) (same length as p, can have leading zeros)
 // REQUIRED : chksqrt(p) must be true
 // sqrt([0, 0, 9, 12]) = [0, 3, 2, 332748117]
