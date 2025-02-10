@@ -1,6 +1,6 @@
 namespace BCC {
 
-// 1-based, undirected graph, init : O(V + E), get_bcc : O(V + E)
+// 1-based, undirected graph, init : O(V + E), add_edge : O(1), get_bcc : O(V + E)
 // call init() first, add_edge(u, v, edge_num), then call get_bcc()
 // bcnt : number of bcc
 // bcc[c] : vector of vertices of color c
