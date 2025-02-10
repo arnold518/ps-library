@@ -36,6 +36,8 @@
 
 ## graph
 
+- [bcc](graph/bcc/bcc.cpp)
+
 ## optimization
 
 - [dinic](optimization/dinic/dinic.cpp)
