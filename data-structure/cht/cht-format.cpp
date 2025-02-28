@@ -27,7 +27,7 @@ struct CHT {
   void init() { V.clear(); }
 
   // push : ammortized O(1), insert line p = ax+b
-  // b must be increasing (or decreasing) ('slope')
+  // a must be increasing (or decreasing) ('slope')
   // cross(V[i-1], V[i]) < (or >) cross(V[i], V[i+1]) ('dir')
   void push(Line p) {
     if (!V.empty() && V.back().a == p.a) {
